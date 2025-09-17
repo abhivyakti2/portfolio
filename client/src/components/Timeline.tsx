@@ -125,12 +125,14 @@ const Timeline: React.FC<TimelineProps> = ({ id }) => {
     <section id={id} className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            My <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Journey</span>
+          <div className="flower-divider mb-6"></div>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 bounce-in">
+            My <span className="bg-gradient-to-r from-bright-yellow to-hot-pink bg-clip-text text-transparent">Journey 🌸</span>
           </h2>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            A timeline of my coding journey, projects, and professional milestones
+          <p className="text-xl text-hot-pink max-w-2xl mx-auto font-medium">
+            A timeline of my coding journey, projects, and professional milestones ✨
           </p>
+          <div className="flower-divider mt-6"></div>
         </div>
 
         {/* Category Filters */}
@@ -139,10 +141,10 @@ const Timeline: React.FC<TimelineProps> = ({ id }) => {
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-200 ${
+              className={`flex items-center space-x-2 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 font-medium ${
                 selectedCategory === category.id
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+                  ? 'bg-gradient-yellow-pink text-white shadow-glow-yellow'
+                  : 'glass-pink text-hot-pink hover:glass-yellow hover:text-white hover:shadow-glow-pink'
               }`}
             >
               <category.icon className="w-4 h-4" />
@@ -154,7 +156,7 @@ const Timeline: React.FC<TimelineProps> = ({ id }) => {
         {/* Timeline */}
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 via-purple-400 to-pink-400"></div>
+          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-1 bg-gradient-to-b from-bright-yellow via-hot-pink to-pastel-lavender rounded-full shadow-glow-pink"></div>
 
           <div className="space-y-8">
             {filteredEvents.map((event, index) => (
@@ -165,7 +167,7 @@ const Timeline: React.FC<TimelineProps> = ({ id }) => {
                 }`}
               >
                 {/* Timeline Node */}
-                <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 flex items-center justify-center text-white z-10">
+                <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-gradient-yellow-pink flex items-center justify-center text-white z-10 shadow-glow-yellow hover:scale-110 transition-transform duration-300">
                   {getEventIcon(event.type)}
                 </div>
 
@@ -175,12 +177,12 @@ const Timeline: React.FC<TimelineProps> = ({ id }) => {
                     index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'
                   }`}
                 >
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/15 transition-all duration-200">
+                  <div className="glass-pink rounded-3xl p-6 hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt hover:shadow-float">
                     <div className="flex items-center space-x-2 mb-3">
-                      <div className={`p-2 rounded-lg bg-gradient-to-r ${getEventColor(event.type)}`}>
+                      <div className={`p-3 rounded-full bg-gradient-to-r ${getEventColor(event.type)} shadow-glow-soft`}>
                         {getEventIcon(event.type)}
                       </div>
-                      <span className="text-blue-400 text-sm font-semibold">
+                      <span className="text-bright-yellow text-sm font-bold bg-bright-yellow/20 px-3 py-1 rounded-full">
                         {new Date(event.date).toLocaleDateString('en-US', { 
                           year: 'numeric', 
                           month: 'long' 
@@ -188,14 +190,14 @@ const Timeline: React.FC<TimelineProps> = ({ id }) => {
                       </span>
                     </div>
                     
-                    <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
-                    <p className="text-white/70 mb-4">{event.description}</p>
+                    <h3 className="text-xl font-bold text-hot-pink mb-2">{event.title}</h3>
+                    <p className="text-white mb-4">{event.description}</p>
                     
                     {event.details && (
                       <ul className="space-y-1 mb-4">
                         {event.details.map((detail, detailIndex) => (
-                          <li key={detailIndex} className="flex items-center space-x-2 text-white/60 text-sm">
-                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full" />
+                          <li key={detailIndex} className="flex items-center space-x-2 text-white text-sm">
+                            <div className="w-2 h-2 bg-gradient-yellow-pink rounded-full shadow-glow-pink" />
                             <span>{detail}</span>
                           </li>
                         ))}
@@ -205,7 +207,7 @@ const Timeline: React.FC<TimelineProps> = ({ id }) => {
                     {event.link && (
                       <a
                         href={event.link}
-                        className="inline-flex items-center space-x-1 text-blue-400 hover:text-blue-300 transition-colors text-sm"
+                        className="inline-flex items-center space-x-1 text-hot-pink hover:text-bright-yellow transition-colors text-sm font-medium hover:scale-105 duration-200"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -224,25 +226,29 @@ const Timeline: React.FC<TimelineProps> = ({ id }) => {
 
         {/* Stats Summary */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-            <h3 className="text-2xl font-bold text-blue-400 mb-2">
+          <div className="glass-pink rounded-3xl p-6 text-center hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt">
+            <div className="text-3xl mb-2">🎨</div>
+            <h3 className="text-2xl font-bold text-bright-yellow mb-2">
               {timelineEvents.filter(e => e.type === 'project').length}
             </h3>
-            <p className="text-white/70">Major Projects</p>
+            <p className="text-hot-pink font-medium">Major Projects</p>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-            <h3 className="text-2xl font-bold text-yellow-400 mb-2">
+          <div className="glass-pink rounded-3xl p-6 text-center hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt">
+            <div className="text-3xl mb-2">🏆</div>
+            <h3 className="text-2xl font-bold text-bright-yellow mb-2">
               {timelineEvents.filter(e => e.type === 'achievement').length}
             </h3>
-            <p className="text-white/70">Achievements</p>
+            <p className="text-hot-pink font-medium">Achievements</p>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-            <h3 className="text-2xl font-bold text-green-400 mb-2">3+</h3>
-            <p className="text-white/70">Years Experience</p>
+          <div className="glass-pink rounded-3xl p-6 text-center hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt">
+            <div className="text-3xl mb-2">⭐</div>
+            <h3 className="text-2xl font-bold text-bright-yellow mb-2">3+</h3>
+            <p className="text-hot-pink font-medium">Years Experience</p>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-            <h3 className="text-2xl font-bold text-purple-400 mb-2">1000+</h3>
-            <p className="text-white/70">Code Contributions</p>
+          <div className="glass-pink rounded-3xl p-6 text-center hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt">
+            <div className="text-3xl mb-2">💻</div>
+            <h3 className="text-2xl font-bold text-bright-yellow mb-2">1000+</h3>
+            <p className="text-hot-pink font-medium">Code Contributions</p>
           </div>
         </div>
       </div>

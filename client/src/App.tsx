@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import FloatingElements from './components/FloatingElements';
 import Header from './components/Header';
 import Landing from './components/Landing';
 import Projects from './components/Projects';
@@ -40,7 +41,8 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+    <div className="min-h-screen bg-gradient-girlish font-poppins relative overflow-hidden">
+      <FloatingElements />
       <Header activeSection={activeSection} onNavigate={scrollToSection} />
       <main>
         <Landing id="home" />

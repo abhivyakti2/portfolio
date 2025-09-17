@@ -145,21 +145,23 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
     <section id={id} className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Share Your <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Feedback</span>
+          <div className="flower-divider mb-6"></div>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 bounce-in">
+            Share Your <span className="bg-gradient-to-r from-bright-yellow to-hot-pink bg-clip-text text-transparent">Feedback 💕</span>
           </h2>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Your insights help me improve my portfolio and projects. All suggestions are welcome and AI-filtered for quality.
+          <p className="text-xl text-hot-pink max-w-2xl mx-auto font-medium">
+            Your insights help me improve my portfolio and projects. All suggestions are welcome and AI-filtered for quality ✨
           </p>
+          <div className="flower-divider mt-6"></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Feedback Form */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+          <div className="glass-pink rounded-3xl p-8 hover:glass-yellow transition-all duration-300">
             <div className="flex items-center space-x-3 mb-6">
-              <MessageSquare className="w-6 h-6 text-blue-400" />
-              <h3 className="text-2xl font-bold text-white">Leave a Suggestion</h3>
-              <div className="flex items-center space-x-1 text-green-400">
+              <span className="text-2xl">💬</span>
+              <h3 className="text-2xl font-bold text-hot-pink">Leave a Suggestion</h3>
+              <div className="flex items-center space-x-1 text-bright-yellow">
                 <Shield className="w-4 h-4" />
                 <span className="text-xs">AI Protected</span>
               </div>
@@ -169,7 +171,7 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-white/70 text-sm font-medium mb-2">
-                    Name (Optional)
+                    Name (Optional) 👤
                   </label>
                   <input
                     type="text"
@@ -177,13 +179,13 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                    className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-full text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-white/70 text-sm font-medium mb-2">
-                    Email (Optional)
+                    Email (Optional) ✉️
                   </label>
                   <input
                     type="email"
@@ -191,7 +193,7 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                    className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-full text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -199,14 +201,14 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
 
               <div>
                 <label htmlFor="category" className="block text-white/70 text-sm font-medium mb-2">
-                  Category
+                  Category 📂
                 </label>
                 <select
                   id="category"
                   name="category"
                   value={formData.category}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                  className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-full text-white focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
                 >
                   <option value="general" className="bg-gray-800">General Feedback</option>
                   <option value="portfolio" className="bg-gray-800">Portfolio Design</option>
@@ -216,7 +218,7 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
 
               <div>
                 <label htmlFor="message" className="block text-white/70 text-sm font-medium mb-2">
-                  Your Suggestion *
+                  Your Suggestion * 💭
                 </label>
                 <textarea
                   id="message"
@@ -225,46 +227,46 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
                   onChange={handleInputChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent resize-none"
-                  placeholder="Share your thoughts about my portfolio or projects..."
+                  className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-3xl text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200 resize-none"
+                  placeholder="Share your thoughts about my portfolio or projects... ✨"
                 />
                 <div className="text-right mt-1">
-                  <span className="text-white/50 text-xs">{formData.message.length}/1000</span>
+                  <span className="text-hot-pink/70 text-xs font-medium">{formData.message.length}/1000</span>
                 </div>
               </div>
 
               <button
                 type="submit"
                 disabled={submissionStatus === 'submitting' || !formData.message.trim()}
-                className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:transform-none disabled:hover:shadow-none flex items-center justify-center space-x-2"
+                className="w-full px-6 py-4 bg-gradient-yellow-pink text-white rounded-full font-semibold hover:shadow-glow-yellow transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:transform-none disabled:hover:shadow-none flex items-center justify-center space-x-2 hover-glow"
               >
                 {submissionStatus === 'submitting' ? (
                   <>
                     <Filter className="w-4 h-4 animate-spin" />
-                    <span>AI Processing...</span>
+                    <span>AI Processing... ✨</span>
                   </>
                 ) : (
                   <>
                     <Send className="w-4 h-4" />
-                    <span>Send Suggestion</span>
+                    <span>Send Suggestion 💕</span>
                   </>
                 )}
               </button>
 
               {/* Status Messages */}
               {submissionStatus === 'success' && (
-                <div className="flex items-center space-x-2 text-green-400 bg-green-400/20 p-3 rounded-lg">
+                <div className="flex items-center space-x-2 text-bright-yellow bg-bright-yellow/20 p-4 rounded-3xl border border-bright-yellow/30">
                   <CheckCircle className="w-5 h-5" />
-                  <span>Thank you! Your suggestion has been submitted successfully.</span>
+                  <span className="font-medium">Thank you! Your suggestion has been submitted successfully. 🌟</span>
                 </div>
               )}
 
               {submissionStatus === 'blocked' && (
-                <div className="flex items-center space-x-2 text-red-400 bg-red-400/20 p-3 rounded-lg">
+                <div className="flex items-center space-x-2 text-hot-pink bg-hot-pink/20 p-4 rounded-3xl border border-hot-pink/30">
                   <XCircle className="w-5 h-5" />
                   <div>
-                    <p>Your message was blocked by our AI filter.</p>
-                    <p className="text-sm text-red-300">{filterMessage}</p>
+                    <p className="font-medium">Your message was blocked by our AI filter.</p>
+                    <p className="text-sm text-hot-pink/80">{filterMessage}</p>
                   </div>
                 </div>
               )}
@@ -272,36 +274,36 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
           </div>
 
           {/* Recent Suggestions */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-              <MessageSquare className="w-6 h-6 mr-3 text-purple-400" />
+          <div className="glass-pink rounded-3xl p-8 hover:glass-yellow transition-all duration-300">
+            <h3 className="text-2xl font-bold text-hot-pink mb-6 flex items-center">
+              <span className="text-2xl mr-3">💬</span>
               Recent Feedback
             </h3>
 
             <div className="space-y-4 max-h-96 overflow-y-auto">
               {suggestions.map((suggestion) => (
-                <div key={suggestion.id} className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors">
+                <div key={suggestion.id} className="glass rounded-2xl p-4 hover:glass-yellow transition-all duration-300 hover:scale-105">
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center space-x-2">
-                      <span className="font-semibold text-white">{suggestion.name}</span>
+                      <span className="font-semibold text-hot-pink">{suggestion.name}</span>
                       <span className={`px-2 py-1 rounded-full text-xs ${getCategoryColor(suggestion.category)}`}>
                         {suggestion.category}
                       </span>
                     </div>
-                    <span className="text-white/50 text-sm">
+                    <span className="text-white/70 text-sm font-medium">
                       {suggestion.timestamp.toLocaleDateString()}
                     </span>
                   </div>
-                  <p className="text-white/70 mb-3">{suggestion.message}</p>
+                  <p className="text-white mb-3">{suggestion.message}</p>
                   <div className="flex items-center justify-between">
                     <button
                       onClick={() => handleHelpful(suggestion.id)}
-                      className="flex items-center space-x-1 text-blue-400 hover:text-blue-300 transition-colors"
+                      className="flex items-center space-x-1 text-bright-yellow hover:text-hot-pink transition-colors hover:scale-105 duration-200"
                     >
                       <ThumbsUp className="w-4 h-4" />
                       <span className="text-sm">{suggestion.helpful} helpful</span>
                     </button>
-                    <CheckCircle className="w-4 h-4 text-green-400" title="Approved by AI filter" />
+                    <CheckCircle className="w-4 h-4 text-bright-yellow" title="Approved by AI filter" />
                   </div>
                 </div>
               ))}
@@ -310,27 +312,27 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
         </div>
 
         {/* AI Filter Info */}
-        <div className="mt-12 bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/20">
+        <div className="mt-12 glass-pink rounded-3xl p-8 border border-soft-pink/30 hover:glass-yellow transition-all duration-300">
           <div className="flex items-center space-x-3 mb-4">
-            <Shield className="w-6 h-6 text-blue-400" />
-            <h4 className="text-lg font-semibold text-white">AI Content Filtering</h4>
+            <span className="text-2xl">🛡️</span>
+            <h4 className="text-lg font-semibold text-hot-pink">AI Content Filtering</h4>
           </div>
-          <p className="text-white/70 mb-4">
+          <p className="text-white mb-4">
             All suggestions go through our AI-powered content filter to ensure respectful and constructive feedback. 
-            This helps maintain a positive environment for everyone.
+            This helps maintain a positive environment for everyone. ✨
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="flex items-center space-x-2">
-              <CheckCircle className="w-4 h-4 text-green-400" />
-              <span className="text-white/70 text-sm">Respectful language</span>
+              <CheckCircle className="w-4 h-4 text-bright-yellow" />
+              <span className="text-white text-sm font-medium">Respectful language 💕</span>
             </div>
             <div className="flex items-center space-x-2">
-              <CheckCircle className="w-4 h-4 text-green-400" />
-              <span className="text-white/70 text-sm">Constructive feedback</span>
+              <CheckCircle className="w-4 h-4 text-bright-yellow" />
+              <span className="text-white text-sm font-medium">Constructive feedback 🌟</span>
             </div>
             <div className="flex items-center space-x-2">
-              <CheckCircle className="w-4 h-4 text-green-400" />
-              <span className="text-white/70 text-sm">Meaningful content</span>
+              <CheckCircle className="w-4 h-4 text-bright-yellow" />
+              <span className="text-white text-sm font-medium">Meaningful content 🌼</span>
             </div>
           </div>
         </div>

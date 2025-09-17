@@ -93,12 +93,14 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
     <section id={id} className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Featured <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Projects</span>
+          <div className="flower-divider mb-6"></div>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 bounce-in">
+            Featured <span className="bg-gradient-to-r from-bright-yellow to-hot-pink bg-clip-text text-transparent">Projects 🌟</span>
           </h2>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Explore my latest work and see the technologies I'm passionate about
+          <p className="text-xl text-hot-pink max-w-2xl mx-auto font-medium">
+            Explore my latest work and see the technologies I'm passionate about ✨
           </p>
+          <div className="flower-divider mt-6"></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
@@ -112,6 +114,9 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
               className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 cursor-pointer transition-all duration-300 hover:bg-white/15 hover:scale-105 ${
                 selectedProject === index ? 'ring-2 ring-blue-400' : ''
               }`}
+              className={`glass-pink rounded-3xl p-6 cursor-pointer transition-all duration-300 hover:glass-yellow hover:scale-105 hover-tilt hover:shadow-float ${
+                selectedProject === index ? 'ring-2 ring-bright-yellow shadow-glow-yellow' : ''
+              }`}
             >
               <img
                 src={project.images[0]}
@@ -119,18 +124,19 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
               <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-              <p className="text-white/70 text-sm mb-4 line-clamp-3">{project.description}</p>
+              <h3 className="text-xl font-bold text-hot-pink mb-2">{project.title}</h3>
+              <p className="text-white text-sm mb-4 line-clamp-3">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.techStack.slice(0, 3).map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full"
+                    className="px-3 py-1 bg-gradient-yellow-pink text-white text-xs rounded-full font-medium"
                   >
                     {tech}
                   </span>
                 ))}
                 {project.techStack.length > 3 && (
-                  <span className="px-2 py-1 bg-gray-500/20 text-gray-300 text-xs rounded-full">
+                  <span className="px-3 py-1 bg-gradient-pink-lavender text-white text-xs rounded-full font-medium">
                     +{project.techStack.length - 3} more
                   </span>
                 )}
@@ -141,7 +147,7 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
                     e.stopPropagation();
                     handleVote(index);
                   }}
-                  className="flex items-center space-x-1 text-pink-400 hover:text-pink-300 transition-colors"
+                  className="flex items-center space-x-1 text-hot-pink hover:text-bright-yellow transition-colors hover:scale-110 duration-200"
                 >
                   <Heart className="w-4 h-4" />
                   <span>{project.votes}</span>
@@ -150,14 +156,14 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
                   <a
                     href={project.githubUrl}
                     onClick={(e) => e.stopPropagation()}
-                    className="text-white/70 hover:text-white transition-colors"
+                    className="text-hot-pink hover:text-bright-yellow transition-colors hover:scale-110 duration-200"
                   >
                     <Github className="w-4 h-4" />
                   </a>
                   <a
                     href={project.liveUrl}
                     onClick={(e) => e.stopPropagation()}
-                    className="text-white/70 hover:text-white transition-colors"
+                    className="text-hot-pink hover:text-bright-yellow transition-colors hover:scale-110 duration-200"
                   >
                     <ExternalLink className="w-4 h-4" />
                   </a>
@@ -168,7 +174,7 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
         </div>
 
         {/* Detailed Project View */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+        <div className="glass-pink rounded-3xl p-8 hover:glass-yellow transition-all duration-300">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="relative">
               <img
@@ -195,16 +201,19 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-white mb-4">{currentProject.title}</h3>
-              <p className="text-white/70 mb-6">{currentProject.description}</p>
+              <h3 className="text-2xl font-bold text-hot-pink mb-4">{currentProject.title}</h3>
+              <p className="text-white mb-6">{currentProject.description}</p>
               
               <div className="mb-6">
-                <h4 className="text-lg font-semibold text-white mb-3">Tech Stack</h4>
+                <h4 className="text-lg font-semibold text-hot-pink mb-3 flex items-center">
+                  <span className="mr-2">🛠️</span>
+                  Tech Stack
+                </h4>
                 <div className="flex flex-wrap gap-2">
                   {currentProject.techStack.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm"
+                      className="px-4 py-2 bg-gradient-yellow-pink text-white rounded-full text-sm font-medium hover:scale-105 transition-transform duration-200"
                     >
                       {tech}
                     </span>
@@ -215,14 +224,14 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
               <div className="flex space-x-4 mb-6">
                 <a
                   href={currentProject.githubUrl}
-                  className="flex items-center space-x-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
+                  className="flex items-center space-x-2 px-6 py-3 bg-gradient-pink-lavender hover:bg-gradient-yellow-pink text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-glow-pink font-medium"
                 >
                   <Github className="w-4 h-4" />
                   <span>View Code</span>
                 </a>
                 <a
                   href={currentProject.liveUrl}
-                  className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                  className="flex items-center space-x-2 px-6 py-3 bg-gradient-yellow-pink hover:bg-gradient-pink-lavender text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-glow-yellow font-medium"
                 >
                   <ExternalLink className="w-4 h-4" />
                   <span>Live Demo</span>
@@ -231,14 +240,14 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
 
               {/* Feedback Section */}
               <div className="mb-6">
-                <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+               <h4 className="text-lg font-semibold text-hot-pink mb-3 flex items-center">
                   <MessageCircle className="w-5 h-5 mr-2" />
-                  Community Feedback
+                 Community Feedback 💬
                 </h4>
                 <div className="space-y-2 mb-4 max-h-32 overflow-y-auto">
                   {currentProject.feedback.map((feedback, index) => (
-                    <div key={index} className="bg-white/5 p-3 rounded-lg">
-                      <p className="text-white/80 text-sm">{feedback}</p>
+                    <div key={index} className="glass p-3 rounded-2xl hover:glass-yellow transition-all duration-200">
+                      <p className="text-white text-sm">{feedback}</p>
                     </div>
                   ))}
                 </div>
@@ -247,12 +256,12 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
                     type="text"
                     value={newFeedback}
                     onChange={(e) => setNewFeedback(e.target.value)}
-                    placeholder="Share your thoughts..."
-                    className="flex-1 px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    placeholder="Share your thoughts... 💭"
+                    className="flex-1 px-4 py-3 glass-pink border border-soft-pink/30 rounded-full text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
                   />
                   <button
                     type="submit"
-                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                    className="px-6 py-3 bg-gradient-yellow-pink hover:bg-gradient-pink-lavender text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-glow-yellow font-medium"
                   >
                     Send
                   </button>
@@ -264,20 +273,21 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
 
         {/* Future Ideas Section */}
         <div className="mt-16">
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">
-            Future Project Ideas - <span className="text-blue-400">Vote for What's Next!</span>
+          <div className="flower-divider mb-6"></div>
+          <h3 className="text-2xl font-bold text-hot-pink mb-8 text-center bounce-in">
+            Future Project Ideas - <span className="text-bright-yellow">Vote for What's Next! 🗳️</span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {futureIdeas.map((idea, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/15 transition-all duration-200">
-                <h4 className="text-lg font-semibold text-white mb-2">{idea.title}</h4>
-                <p className="text-white/70 text-sm mb-4">{idea.description}</p>
+              <div key={index} className="glass-pink rounded-3xl p-6 hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt hover:shadow-float">
+                <h4 className="text-lg font-semibold text-hot-pink mb-2">{idea.title}</h4>
+                <p className="text-white text-sm mb-4">{idea.description}</p>
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2 text-yellow-400">
+                  <div className="flex items-center space-x-2 text-bright-yellow">
                     <Star className="w-4 h-4" />
                     <span>{idea.votes} votes</span>
                   </div>
-                  <button className="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg transition-colors">
+                  <button className="px-4 py-2 bg-gradient-yellow-pink hover:bg-gradient-pink-lavender text-white text-sm rounded-full transition-all duration-300 hover:scale-105 font-medium">
                     Vote
                   </button>
                 </div>

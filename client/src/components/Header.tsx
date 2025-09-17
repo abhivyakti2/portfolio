@@ -24,12 +24,12 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
+    <header className="fixed top-0 left-0 right-0 z-50 glass-pink rounded-b-3xl mx-4 mt-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
-            <Code2 className="w-8 h-8 text-blue-400" />
-            <span className="text-white font-bold text-xl">Portfolio</span>
+            <div className="text-2xl">🌸</div>
+            <span className="text-hot-pink font-bold text-xl font-poppins">Alex's World</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -38,10 +38,10 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => {
               <button
                 key={id}
                 onClick={() => handleNavClick(id)}
-                className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200 ${
+                className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 ${
                   activeSection === id
-                    ? 'text-blue-400 bg-blue-400/20'
-                    : 'text-white/70 hover:text-white hover:bg-white/10'
+                    ? 'text-white bg-gradient-yellow-pink shadow-glow-yellow'
+                    : 'text-hot-pink hover:text-white hover:bg-gradient-pink-lavender hover:shadow-glow-pink'
                 }`}
               >
                 <Icon className="w-4 h-4" />
@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white p-2"
+            className="md:hidden text-hot-pink p-2 rounded-full hover:bg-soft-pink/20 transition-all duration-200"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -61,16 +61,16 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-white/20">
+          <nav className="md:hidden py-4 border-t border-soft-pink/30">
             <div className="flex flex-col space-y-2">
               {navItems.map(({ id, label, icon: Icon }) => (
                 <button
                   key={id}
                   onClick={() => handleNavClick(id)}
-                  className={`flex items-center space-x-3 px-4 py-3 rounded-lg text-left transition-all duration-200 ${
+                  className={`flex items-center space-x-3 px-4 py-3 rounded-full text-left transition-all duration-300 hover:scale-105 ${
                     activeSection === id
-                      ? 'text-blue-400 bg-blue-400/20'
-                      : 'text-white/70 hover:text-white hover:bg-white/10'
+                      ? 'text-white bg-gradient-yellow-pink shadow-glow-yellow'
+                      : 'text-hot-pink hover:text-white hover:bg-gradient-pink-lavender'
                   }`}
                 >
                   <Icon className="w-5 h-5" />
