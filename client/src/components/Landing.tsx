@@ -19,12 +19,12 @@ const Landing: React.FC<LandingProps> = ({ id }) => {
         <div className="bounce-in">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
             Hey there! 🌸 I'm{' '}
-            <span className="bg-gradient-to-r from-bright-yellow via-hot-pink to-pastel-lavender bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-citrus-yellow via-strawberry-pink to-tangerine bg-clip-text text-transparent">
               Alex Thompson ✨
             </span>
           </h1>
           
-          <p className="text-xl sm:text-2xl text-hot-pink mb-8 max-w-2xl mx-auto leading-relaxed font-medium">
+          <p className="text-xl sm:text-2xl text-strawberry-pink mb-8 max-w-2xl mx-auto leading-relaxed font-medium">
             Full-stack developer passionate about creating innovative web solutions and bringing ideas to life through code 💕
           </p>
 
@@ -56,6 +56,7 @@ const Landing: React.FC<LandingProps> = ({ id }) => {
                 className="p-3 rounded-full glass-pink hover:glass-yellow transition-all duration-300 hover:scale-110 hover:shadow-glow-pink"
               >
                 <Mail className="w-6 h-6 text-hot-pink" />
+                <Mail className="w-6 h-6 text-strawberry-pink" />
               </a>
             </div>
           </div>
@@ -63,17 +64,17 @@ const Landing: React.FC<LandingProps> = ({ id }) => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
             <div className="glass-pink rounded-3xl p-6 hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt hover:shadow-float">
               <div className="text-3xl mb-2">🎨</div>
-              <h3 className="text-2xl font-bold text-bright-yellow mb-2">50+</h3>
+              <h3 className="text-2xl font-bold text-citrus-yellow mb-2">50+</h3>
               <p className="text-white font-medium">Projects Completed</p>
             </div>
             <div className="glass-pink rounded-3xl p-6 hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt hover:shadow-float">
               <div className="text-3xl mb-2">⭐</div>
-              <h3 className="text-2xl font-bold text-bright-yellow mb-2">3+</h3>
+              <h3 className="text-2xl font-bold text-citrus-yellow mb-2">3+</h3>
               <p className="text-white font-medium">Years Experience</p>
             </div>
             <div className="glass-pink rounded-3xl p-6 hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt hover:shadow-float">
               <div className="text-3xl mb-2">💖</div>
-              <h3 className="text-2xl font-bold text-bright-yellow mb-2">100%</h3>
+              <h3 className="text-2xl font-bold text-citrus-yellow mb-2">100%</h3>
               <p className="text-white font-medium">Client Satisfaction</p>
             </div>
           </div>
@@ -82,7 +83,7 @@ const Landing: React.FC<LandingProps> = ({ id }) => {
             onClick={scrollToNext}
             className="animate-bounce p-4 rounded-full glass-pink hover:glass-yellow transition-all duration-300 hover:scale-110 hover:shadow-glow-yellow"
           >
-            <ArrowDown className="w-6 h-6 text-bright-yellow" />
+            <ArrowDown className="w-6 h-6 text-citrus-yellow" />
           </button>
         </div>
       </div>
