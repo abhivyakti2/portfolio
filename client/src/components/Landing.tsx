@@ -24,6 +24,7 @@ const Landing: React.FC<LandingProps> = ({ id }) => {
             </span>
           </h1>
           
+          <p className="text-xl sm:text-2xl text-hot-pink mb-8 max-w-2xl mx-auto leading-relaxed font-medium">
           <p className="text-xl sm:text-2xl text-bright-yellow mb-8 max-w-2xl mx-auto leading-relaxed font-medium">
             Full-stack developer passionate about creating innovative web solutions and bringing ideas to life through code 💕
           </p>
@@ -91,3 +92,7 @@ const Landing: React.FC<LandingProps> = ({ id }) => {
 };
 
 export default Landing;
+  )
+}
+  )
+}
