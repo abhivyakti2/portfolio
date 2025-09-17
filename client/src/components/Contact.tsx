@@ -100,23 +100,25 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
     <section id={id} className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Let's <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">Connect</span>
+          <div className="flower-divider mb-6"></div>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 bounce-in">
+            Let's <span className="bg-gradient-to-r from-bright-yellow to-hot-pink bg-clip-text text-transparent">Connect 💕</span>
           </h2>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Ready to collaborate, have a project in mind, or just want to chat? I'm always open to new opportunities and connections.
+          <p className="text-xl text-hot-pink max-w-2xl mx-auto font-medium">
+            Ready to collaborate, have a project in mind, or just want to chat? I'm always open to new opportunities and connections ✨
           </p>
+          <div className="flower-divider mt-6"></div>
         </div>
 
         {/* Tab Navigation */}
         <div className="flex justify-center mb-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2">
+          <div className="glass-pink rounded-full p-2">
             <button
               onClick={() => setActiveTab('contact')}
-              className={`px-6 py-3 rounded-lg transition-all duration-200 flex items-center space-x-2 ${
+              className={`px-6 py-3 rounded-full transition-all duration-300 flex items-center space-x-2 font-medium hover:scale-105 ${
                 activeTab === 'contact'
-                  ? 'bg-blue-600 text-white'
-                  : 'text-white/70 hover:text-white hover:bg-white/10'
+                  ? 'bg-gradient-yellow-pink text-white shadow-glow-yellow'
+                  : 'text-hot-pink hover:text-white hover:bg-gradient-pink-lavender'
               }`}
             >
               <Mail className="w-4 h-4" />
@@ -124,10 +126,10 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
             </button>
             <button
               onClick={() => setActiveTab('collaborate')}
-              className={`px-6 py-3 rounded-lg transition-all duration-200 flex items-center space-x-2 ${
+              className={`px-6 py-3 rounded-full transition-all duration-300 flex items-center space-x-2 font-medium hover:scale-105 ${
                 activeTab === 'collaborate'
-                  ? 'bg-blue-600 text-white'
-                  : 'text-white/70 hover:text-white hover:bg-white/10'
+                  ? 'bg-gradient-yellow-pink text-white shadow-glow-yellow'
+                  : 'text-hot-pink hover:text-white hover:bg-gradient-pink-lavender'
               }`}
             >
               <Users className="w-4 h-4" />
@@ -139,9 +141,9 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
         {activeTab === 'contact' ? (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <Mail className="w-6 h-6 mr-3 text-blue-400" />
+            <div className="glass-pink rounded-3xl p-8 hover:glass-yellow transition-all duration-300">
+              <h3 className="text-2xl font-bold text-hot-pink mb-6 flex items-center">
+                <span className="text-2xl mr-3">✉️</span>
                 Send a Message
               </h3>
 
@@ -149,7 +151,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-white/70 text-sm font-medium mb-2">
-                      Name *
+                      Name * 👤
                     </label>
                     <input
                       type="text"
@@ -158,13 +160,13 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                      className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-full text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
                       placeholder="Your name"
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-white/70 text-sm font-medium mb-2">
-                      Email *
+                      Email * ✉️
                     </label>
                     <input
                       type="email"
@@ -173,7 +175,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                      className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-full text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -181,14 +183,14 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
 
                 <div>
                   <label htmlFor="type" className="block text-white/70 text-sm font-medium mb-2">
-                    Inquiry Type
+                    Inquiry Type 📂
                   </label>
                   <select
                     id="type"
                     name="type"
                     value={formData.type}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                    className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-full text-white focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
                   >
                     <option value="general" className="bg-gray-800">General Inquiry</option>
                     <option value="project" className="bg-gray-800">Project Discussion</option>
@@ -199,7 +201,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
 
                 <div>
                   <label htmlFor="subject" className="block text-white/70 text-sm font-medium mb-2">
-                    Subject *
+                    Subject * 📝
                   </label>
                   <input
                     type="text"
@@ -208,14 +210,14 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                    className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-full text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
                     placeholder="What's this about?"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-white/70 text-sm font-medium mb-2">
-                    Message *
+                    Message * 💭
                   </label>
                   <textarea
                     id="message"
@@ -224,29 +226,29 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                     onChange={handleInputChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent resize-none"
-                    placeholder="Tell me more about your project or inquiry..."
+                    className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-3xl text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200 resize-none"
+                    placeholder="Tell me more about your project or inquiry... ✨"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="w-full px-6 py-4 bg-gradient-yellow-pink text-white rounded-full font-semibold hover:shadow-glow-yellow transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 hover-glow"
                 >
                   <Send className="w-4 h-4" />
-                  <span>Send Message</span>
+                  <span>Send Message 💕</span>
                 </button>
               </form>
             </div>
 
             {/* Chat Interface */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <MessageCircle className="w-6 h-6 mr-3 text-green-400" />
+            <div className="glass-pink rounded-3xl p-8 hover:glass-yellow transition-all duration-300">
+              <h3 className="text-2xl font-bold text-hot-pink mb-6 flex items-center">
+                <span className="text-2xl mr-3">💬</span>
                 Quick Chat
               </h3>
 
-              <div className="bg-white/5 rounded-lg p-4 h-80 overflow-y-auto mb-4 space-y-4">
+              <div className="glass rounded-2xl p-4 h-80 overflow-y-auto mb-4 space-y-4">
                 {chatMessages.map((message) => (
                   <div
                     key={message.id}
@@ -255,8 +257,8 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                     <div
                       className={`max-w-xs px-4 py-2 rounded-lg ${
                         message.isBot
-                          ? 'bg-blue-600/20 text-blue-100'
-                          : 'bg-green-600/20 text-green-100'
+                          ? 'glass-yellow text-white'
+                          : 'bg-gradient-yellow-pink text-white'
                       }`}
                     >
                       <p className="text-sm">{message.message}</p>
@@ -273,37 +275,37 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                   type="text"
                   value={newMessage}
                   onChange={(e) => setNewMessage(e.target.value)}
-                  placeholder="Type a message..."
-                  className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-green-400"
+                  placeholder="Type a message... 💭"
+                  className="flex-1 px-4 py-3 glass border border-soft-pink/30 rounded-full text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
                 />
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
+                  className="px-4 py-3 bg-gradient-yellow-pink hover:bg-gradient-pink-lavender text-white rounded-full transition-all duration-300 hover:scale-105"
                 >
                   <Send className="w-4 h-4" />
                 </button>
               </form>
 
               <div className="mt-6 pt-6 border-t border-white/20">
-                <p className="text-white/70 text-sm mb-4">Or connect with me directly:</p>
+                <p className="text-white text-sm mb-4 font-medium">Or connect with me directly: 🌟</p>
                 <div className="flex space-x-4">
                   <a
                     href="https://linkedin.com"
-                    className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                    className="flex items-center space-x-2 px-4 py-2 bg-gradient-yellow-pink hover:bg-gradient-pink-lavender text-white rounded-full transition-all duration-300 hover:scale-105 font-medium"
                   >
                     <Linkedin className="w-4 h-4" />
                     <span>LinkedIn</span>
                   </a>
                   <a
                     href="https://github.com"
-                    className="flex items-center space-x-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
+                    className="flex items-center space-x-2 px-4 py-2 bg-gradient-pink-lavender hover:bg-gradient-yellow-pink text-white rounded-full transition-all duration-300 hover:scale-105 font-medium"
                   >
                     <Github className="w-4 h-4" />
                     <span>GitHub</span>
                   </a>
                   <a
                     href="mailto:alex@example.com"
-                    className="flex items-center space-x-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors"
+                    className="flex items-center space-x-2 px-4 py-2 bg-gradient-yellow-pink hover:bg-gradient-pink-lavender text-white rounded-full transition-all duration-300 hover:scale-105 font-medium"
                   >
                     <Mail className="w-4 h-4" />
                     <span>Email</span>
@@ -315,10 +317,10 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
         ) : (
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-white mb-4">Let's Team Up!</h3>
-              <p className="text-white/70 max-w-2xl mx-auto">
+              <h3 className="text-3xl font-bold text-hot-pink mb-4">Let's Team Up! 🤝</h3>
+              <p className="text-white max-w-2xl mx-auto font-medium">
                 I'm always looking for exciting collaboration opportunities. Whether it's a hackathon, 
-                side project, or open source contribution, let's create something amazing together!
+                side project, or open source contribution, let's create something amazing together! ✨
               </p>
             </div>
 
@@ -326,31 +328,31 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
               {collaborationTypes.map((type, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/15 transition-all duration-200 hover:scale-105"
+                  className="glass-pink rounded-3xl p-6 hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt hover:shadow-float"
                 >
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${type.color} flex items-center justify-center`}>
                     {type.icon}
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-3 text-center">{type.title}</h4>
-                  <p className="text-white/70 text-center">{type.description}</p>
+                  <h4 className="text-xl font-bold text-hot-pink mb-3 text-center">{type.title}</h4>
+                  <p className="text-white text-center">{type.description}</p>
                 </div>
               ))}
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center">
-              <h4 className="text-2xl font-bold text-white mb-4">Ready to Collaborate?</h4>
-              <p className="text-white/70 mb-6 max-w-2xl mx-auto">
+            <div className="glass-pink rounded-3xl p-8 text-center hover:glass-yellow transition-all duration-300">
+              <h4 className="text-2xl font-bold text-hot-pink mb-4">Ready to Collaborate? 🌟</h4>
+              <p className="text-white mb-6 max-w-2xl mx-auto">
                 I bring expertise in full-stack development, problem-solving skills, and a passion for learning. 
-                Let's combine our talents to build something extraordinary!
+                Let's combine our talents to build something extraordinary! ✨
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-full font-semibold hover:shadow-2xl hover:shadow-purple-500/25 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
+                <button className="px-8 py-4 bg-gradient-yellow-pink text-white rounded-full font-semibold hover:shadow-glow-yellow transform hover:scale-105 transition-all duration-300 flex items-center space-x-2 hover-glow">
                   <Calendar className="w-4 h-4" />
-                  <span>Schedule a Call</span>
+                  <span>Schedule a Call 📞</span>
                 </button>
                 <a
                   href="https://linkedin.com"
-                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition-colors flex items-center space-x-2"
+                  className="px-8 py-4 bg-gradient-pink-lavender hover:bg-gradient-yellow-pink text-white rounded-full font-semibold transition-all duration-300 hover:scale-105 flex items-center space-x-2"
                 >
                   <Linkedin className="w-4 h-4" />
                   <span>Connect on LinkedIn</span>

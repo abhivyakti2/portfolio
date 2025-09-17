@@ -43,29 +43,29 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   ];
 
   return (
-    <footer className="bg-black/40 backdrop-blur-sm border-t border-white/10">
+    <footer className="glass-pink border-t border-soft-pink/30 rounded-t-3xl mx-4 mb-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <Code2 className="w-8 h-8 text-blue-400" />
-              <span className="text-white font-bold text-xl">Alex Thompson</span>
+              <span className="text-2xl">🌸</span>
+              <span className="text-hot-pink font-bold text-xl font-poppins">Alex Thompson</span>
             </div>
-            <p className="text-white/70 mb-6 max-w-md">
-              Full-stack developer passionate about creating innovative web solutions and bringing ideas to life through code.
+            <p className="text-white mb-6 max-w-md">
+              Full-stack developer passionate about creating innovative web solutions and bringing ideas to life through code ✨
             </p>
             <div className="flex space-x-4">
               {socialLinks.map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
-                  className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-200 hover:scale-110 group"
+                  className="p-3 rounded-full glass hover:glass-yellow transition-all duration-300 hover:scale-110 hover:shadow-glow-pink group"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
                 >
-                  <Icon className="w-5 h-5 text-white group-hover:text-blue-400 transition-colors" />
+                  <Icon className="w-5 h-5 text-hot-pink group-hover:text-bright-yellow transition-colors" />
                 </a>
               ))}
             </div>
@@ -73,13 +73,16 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="text-hot-pink font-semibold text-lg mb-4 flex items-center">
+              <span className="mr-2">🔗</span>
+              Quick Links
+            </h3>
             <ul className="space-y-2">
               {quickLinks.map(({ label, section }) => (
                 <li key={section}>
                   <button
                     onClick={() => onNavigate(section)}
-                    className="text-white/70 hover:text-white transition-colors text-left"
+                    className="text-white hover:text-bright-yellow transition-colors text-left hover:scale-105 duration-200 font-medium"
                   >
                     {label}
                   </button>
@@ -90,43 +93,43 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
           {/* Quick Feedback */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4 flex items-center">
-              <MessageSquare className="w-5 h-5 mr-2 text-purple-400" />
+            <h3 className="text-hot-pink font-semibold text-lg mb-4 flex items-center">
+              <span className="text-xl mr-2">💭</span>
               Quick Thoughts?
             </h3>
             {!showFeedbackForm ? (
               <button
                 onClick={() => setShowFeedbackForm(true)}
-                className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors text-sm"
+                className="px-4 py-2 bg-gradient-yellow-pink hover:bg-gradient-pink-lavender text-white rounded-full transition-all duration-300 hover:scale-105 text-sm font-medium"
               >
                 Share Feedback
               </button>
             ) : (
               <div className="space-y-3">
                 {feedbackSubmitted ? (
-                  <div className="text-green-400 text-sm">
-                    ✓ Thanks for your feedback!
+                  <div className="text-bright-yellow text-sm font-medium">
+                    ✓ Thanks for your feedback! 🌟
                   </div>
                 ) : (
                   <form onSubmit={handleQuickFeedback} className="space-y-2">
                     <textarea
                       value={quickFeedback}
                       onChange={(e) => setQuickFeedback(e.target.value)}
-                      placeholder="What do you think about my portfolio?"
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-400 text-sm resize-none"
+                      placeholder="What do you think about my portfolio? ✨"
+                      className="w-full px-3 py-2 glass border border-soft-pink/30 rounded-2xl text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow text-sm resize-none transition-all duration-200"
                       rows={3}
                     />
                     <div className="flex space-x-2">
                       <button
                         type="submit"
-                        className="px-3 py-1 bg-purple-600 hover:bg-purple-700 text-white rounded text-sm transition-colors"
+                        className="px-3 py-1 bg-gradient-yellow-pink hover:bg-gradient-pink-lavender text-white rounded-full text-sm transition-all duration-300 hover:scale-105 font-medium"
                       >
                         Send
                       </button>
                       <button
                         type="button"
                         onClick={() => setShowFeedbackForm(false)}
-                        className="px-3 py-1 bg-gray-600 hover:bg-gray-700 text-white rounded text-sm transition-colors"
+                        className="px-3 py-1 glass hover:glass-yellow text-white rounded-full text-sm transition-all duration-300 hover:scale-105 font-medium"
                       >
                         Cancel
                       </button>
@@ -139,20 +142,20 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <div className="flex items-center space-x-2 text-white/70">
+        <div className="mt-12 pt-8 border-t border-soft-pink/30 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex items-center space-x-2 text-white">
             <span>Made with</span>
-            <Heart className="w-4 h-4 text-red-400 animate-pulse" />
+            <Heart className="w-4 h-4 text-hot-pink animate-pulse" />
             <span>by Alex Thompson</span>
           </div>
           
           <div className="flex items-center space-x-6">
-            <p className="text-white/70 text-sm">
+            <p className="text-white text-sm font-medium">
               © {new Date().getFullYear()} All rights reserved.
             </p>
             <button
               onClick={scrollToTop}
-              className="p-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-all duration-200 hover:scale-110"
+              className="p-3 rounded-full bg-gradient-yellow-pink hover:bg-gradient-pink-lavender text-white transition-all duration-300 hover:scale-110 hover:shadow-glow-pink"
               aria-label="Scroll to top"
             >
               <ArrowUp className="w-4 h-4" />
