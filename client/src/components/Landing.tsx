@@ -92,3 +92,5 @@ const Landing: React.FC<LandingProps> = ({ id }) => {
 };
 
 export default Landing;
+  )
+}
