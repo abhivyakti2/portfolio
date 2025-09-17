@@ -102,9 +102,9 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
         <div className="text-center mb-16">
           <div className="flower-divider mb-6"></div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 bounce-in">
-            Let's <span className="bg-gradient-to-r from-bright-yellow to-hot-pink bg-clip-text text-transparent">Connect 💕</span>
+            Let's <span className="bg-gradient-to-r from-bright-yellow to-teal bg-clip-text text-transparent">Connect 💕</span>
           </h2>
-          <p className="text-xl text-hot-pink max-w-2xl mx-auto font-medium">
+          <p className="text-xl text-bright-yellow max-w-2xl mx-auto font-medium">
             Ready to collaborate, have a project in mind, or just want to chat? I'm always open to new opportunities and connections ✨
           </p>
           <div className="flower-divider mt-6"></div>
@@ -118,7 +118,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
               className={`px-6 py-3 rounded-full transition-all duration-300 flex items-center space-x-2 font-medium hover:scale-105 ${
                 activeTab === 'contact'
                   ? 'bg-gradient-yellow-pink text-white shadow-glow-yellow'
-                  : 'text-hot-pink hover:text-white hover:bg-gradient-pink-lavender'
+                  : 'text-bright-yellow hover:text-white hover:bg-gradient-purple-teal'
               }`}
             >
               <Mail className="w-4 h-4" />
@@ -129,7 +129,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
               className={`px-6 py-3 rounded-full transition-all duration-300 flex items-center space-x-2 font-medium hover:scale-105 ${
                 activeTab === 'collaborate'
                   ? 'bg-gradient-yellow-pink text-white shadow-glow-yellow'
-                  : 'text-hot-pink hover:text-white hover:bg-gradient-pink-lavender'
+                  : 'text-bright-yellow hover:text-white hover:bg-gradient-purple-teal'
               }`}
             >
               <Users className="w-4 h-4" />
@@ -142,7 +142,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="glass-pink rounded-3xl p-8 hover:glass-yellow transition-all duration-300">
-              <h3 className="text-2xl font-bold text-hot-pink mb-6 flex items-center">
+              <h3 className="text-2xl font-bold text-bright-yellow mb-6 flex items-center">
                 <span className="text-2xl mr-3">✉️</span>
                 Send a Message
               </h3>
@@ -160,7 +160,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-full text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
+                      className="w-full px-4 py-3 glass border border-bright-yellow/30 rounded-full text-white placeholder-bright-yellow/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
                       placeholder="Your name"
                     />
                   </div>
@@ -175,7 +175,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-full text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
+                      className="w-full px-4 py-3 glass border border-bright-yellow/30 rounded-full text-white placeholder-bright-yellow/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -190,7 +190,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                     name="type"
                     value={formData.type}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-full text-white focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
+                    className="w-full px-4 py-3 glass border border-bright-yellow/30 rounded-full text-white focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
                   >
                     <option value="general" className="bg-gray-800">General Inquiry</option>
                     <option value="project" className="bg-gray-800">Project Discussion</option>
@@ -210,7 +210,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-full text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
+                    className="w-full px-4 py-3 glass border border-bright-yellow/30 rounded-full text-white placeholder-bright-yellow/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
                     placeholder="What's this about?"
                   />
                 </div>
@@ -226,7 +226,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                     onChange={handleInputChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-3xl text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200 resize-none"
+                    className="w-full px-4 py-3 glass border border-bright-yellow/30 rounded-3xl text-white placeholder-bright-yellow/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200 resize-none"
                     placeholder="Tell me more about your project or inquiry... ✨"
                   />
                 </div>
@@ -243,7 +243,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
 
             {/* Chat Interface */}
             <div className="glass-pink rounded-3xl p-8 hover:glass-yellow transition-all duration-300">
-              <h3 className="text-2xl font-bold text-hot-pink mb-6 flex items-center">
+              <h3 className="text-2xl font-bold text-bright-yellow mb-6 flex items-center">
                 <span className="text-2xl mr-3">💬</span>
                 Quick Chat
               </h3>
@@ -276,11 +276,11 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                   value={newMessage}
                   onChange={(e) => setNewMessage(e.target.value)}
                   placeholder="Type a message... 💭"
-                  className="flex-1 px-4 py-3 glass border border-soft-pink/30 rounded-full text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
+                  className="flex-1 px-4 py-3 glass border border-bright-yellow/30 rounded-full text-white placeholder-bright-yellow/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
                 />
                 <button
                   type="submit"
-                  className="px-4 py-3 bg-gradient-yellow-pink hover:bg-gradient-pink-lavender text-white rounded-full transition-all duration-300 hover:scale-105"
+                  className="px-4 py-3 bg-gradient-yellow-pink hover:bg-gradient-purple-teal text-white rounded-full transition-all duration-300 hover:scale-105"
                 >
                   <Send className="w-4 h-4" />
                 </button>
@@ -298,14 +298,14 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                   </a>
                   <a
                     href="https://github.com"
-                    className="flex items-center space-x-2 px-4 py-2 bg-gradient-pink-lavender hover:bg-gradient-yellow-pink text-white rounded-full transition-all duration-300 hover:scale-105 font-medium"
+                    className="flex items-center space-x-2 px-4 py-2 bg-gradient-purple-teal hover:bg-gradient-yellow-pink text-white rounded-full transition-all duration-300 hover:scale-105 font-medium"
                   >
                     <Github className="w-4 h-4" />
                     <span>GitHub</span>
                   </a>
                   <a
                     href="mailto:alex@example.com"
-                    className="flex items-center space-x-2 px-4 py-2 bg-gradient-yellow-pink hover:bg-gradient-pink-lavender text-white rounded-full transition-all duration-300 hover:scale-105 font-medium"
+                    className="flex items-center space-x-2 px-4 py-2 bg-gradient-yellow-pink hover:bg-gradient-purple-teal text-white rounded-full transition-all duration-300 hover:scale-105 font-medium"
                   >
                     <Mail className="w-4 h-4" />
                     <span>Email</span>
@@ -317,7 +317,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
         ) : (
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-hot-pink mb-4">Let's Team Up! 🤝</h3>
+              <h3 className="text-3xl font-bold text-bright-yellow mb-4">Let's Team Up! 🤝</h3>
               <p className="text-white max-w-2xl mx-auto font-medium">
                 I'm always looking for exciting collaboration opportunities. Whether it's a hackathon, 
                 side project, or open source contribution, let's create something amazing together! ✨
@@ -333,14 +333,14 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${type.color} flex items-center justify-center`}>
                     {type.icon}
                   </div>
-                  <h4 className="text-xl font-bold text-hot-pink mb-3 text-center">{type.title}</h4>
+                  <h4 className="text-xl font-bold text-bright-yellow mb-3 text-center">{type.title}</h4>
                   <p className="text-white text-center">{type.description}</p>
                 </div>
               ))}
             </div>
 
             <div className="glass-pink rounded-3xl p-8 text-center hover:glass-yellow transition-all duration-300">
-              <h4 className="text-2xl font-bold text-hot-pink mb-4">Ready to Collaborate? 🌟</h4>
+              <h4 className="text-2xl font-bold text-bright-yellow mb-4">Ready to Collaborate? 🌟</h4>
               <p className="text-white mb-6 max-w-2xl mx-auto">
                 I bring expertise in full-stack development, problem-solving skills, and a passion for learning. 
                 Let's combine our talents to build something extraordinary! ✨
@@ -352,7 +352,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                 </button>
                 <a
                   href="https://linkedin.com"
-                  className="px-8 py-4 bg-gradient-pink-lavender hover:bg-gradient-yellow-pink text-white rounded-full font-semibold transition-all duration-300 hover:scale-105 flex items-center space-x-2"
+                  className="px-8 py-4 bg-gradient-purple-teal hover:bg-gradient-yellow-pink text-white rounded-full font-semibold transition-all duration-300 hover:scale-105 flex items-center space-x-2"
                 >
                   <Linkedin className="w-4 h-4" />
                   <span>Connect on LinkedIn</span>

@@ -25,6 +25,7 @@ const Landing: React.FC<LandingProps> = ({ id }) => {
           </h1>
           
           <p className="text-xl sm:text-2xl text-hot-pink mb-8 max-w-2xl mx-auto leading-relaxed font-medium">
+          <p className="text-xl sm:text-2xl text-bright-yellow mb-8 max-w-2xl mx-auto leading-relaxed font-medium">
             Full-stack developer passionate about creating innovative web solutions and bringing ideas to life through code 💕
           </p>
 
@@ -64,25 +65,25 @@ const Landing: React.FC<LandingProps> = ({ id }) => {
             <div className="glass-pink rounded-3xl p-6 hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt hover:shadow-float">
               <div className="text-3xl mb-2">🎨</div>
               <h3 className="text-2xl font-bold text-bright-yellow mb-2">50+</h3>
-              <p className="text-hot-pink font-medium">Projects Completed</p>
+              <p className="text-white font-medium">Projects Completed</p>
             </div>
             <div className="glass-pink rounded-3xl p-6 hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt hover:shadow-float">
               <div className="text-3xl mb-2">⭐</div>
               <h3 className="text-2xl font-bold text-bright-yellow mb-2">3+</h3>
-              <p className="text-hot-pink font-medium">Years Experience</p>
+              <p className="text-white font-medium">Years Experience</p>
             </div>
             <div className="glass-pink rounded-3xl p-6 hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt hover:shadow-float">
               <div className="text-3xl mb-2">💖</div>
               <h3 className="text-2xl font-bold text-bright-yellow mb-2">100%</h3>
-              <p className="text-hot-pink font-medium">Client Satisfaction</p>
+              <p className="text-white font-medium">Client Satisfaction</p>
             </div>
           </div>
 
           <button 
             onClick={scrollToNext}
-            className="animate-bounce p-4 rounded-full glass-pink hover:glass-yellow transition-all duration-300 hover:scale-110 hover:shadow-glow-pink"
+            className="animate-bounce p-4 rounded-full glass-pink hover:glass-yellow transition-all duration-300 hover:scale-110 hover:shadow-glow-yellow"
           >
-            <ArrowDown className="w-6 h-6 text-hot-pink" />
+            <ArrowDown className="w-6 h-6 text-bright-yellow" />
           </button>
         </div>
       </div>

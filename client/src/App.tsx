@@ -41,7 +41,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-girlish font-poppins relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-hero font-poppins relative overflow-hidden">
       <FloatingElements />
       <Header activeSection={activeSection} onNavigate={scrollToSection} />
       <main>

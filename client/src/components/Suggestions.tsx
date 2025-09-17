@@ -147,9 +147,9 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
         <div className="text-center mb-16">
           <div className="flower-divider mb-6"></div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 bounce-in">
-            Share Your <span className="bg-gradient-to-r from-bright-yellow to-hot-pink bg-clip-text text-transparent">Feedback 💕</span>
+            Share Your <span className="bg-gradient-to-r from-bright-yellow to-teal bg-clip-text text-transparent">Feedback 💕</span>
           </h2>
-          <p className="text-xl text-hot-pink max-w-2xl mx-auto font-medium">
+          <p className="text-xl text-bright-yellow max-w-2xl mx-auto font-medium">
             Your insights help me improve my portfolio and projects. All suggestions are welcome and AI-filtered for quality ✨
           </p>
           <div className="flower-divider mt-6"></div>
@@ -160,7 +160,7 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
           <div className="glass-pink rounded-3xl p-8 hover:glass-yellow transition-all duration-300">
             <div className="flex items-center space-x-3 mb-6">
               <span className="text-2xl">💬</span>
-              <h3 className="text-2xl font-bold text-hot-pink">Leave a Suggestion</h3>
+              <h3 className="text-2xl font-bold text-bright-yellow">Leave a Suggestion</h3>
               <div className="flex items-center space-x-1 text-bright-yellow">
                 <Shield className="w-4 h-4" />
                 <span className="text-xs">AI Protected</span>
@@ -179,7 +179,7 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-full text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
+                    className="w-full px-4 py-3 glass border border-bright-yellow/30 rounded-full text-white placeholder-bright-yellow/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
                     placeholder="Your name"
                   />
                 </div>
@@ -193,7 +193,7 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-full text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
+                    className="w-full px-4 py-3 glass border border-bright-yellow/30 rounded-full text-white placeholder-bright-yellow/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -208,7 +208,7 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
                   name="category"
                   value={formData.category}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-full text-white focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
+                  className="w-full px-4 py-3 glass border border-bright-yellow/30 rounded-full text-white focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200"
                 >
                   <option value="general" className="bg-gray-800">General Feedback</option>
                   <option value="portfolio" className="bg-gray-800">Portfolio Design</option>
@@ -227,11 +227,11 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
                   onChange={handleInputChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 glass border border-soft-pink/30 rounded-3xl text-white placeholder-hot-pink/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200 resize-none"
+                  className="w-full px-4 py-3 glass border border-bright-yellow/30 rounded-3xl text-white placeholder-bright-yellow/70 focus:outline-none focus:ring-2 focus:ring-bright-yellow focus:glass-yellow transition-all duration-200 resize-none"
                   placeholder="Share your thoughts about my portfolio or projects... ✨"
                 />
                 <div className="text-right mt-1">
-                  <span className="text-hot-pink/70 text-xs font-medium">{formData.message.length}/1000</span>
+                  <span className="text-bright-yellow/70 text-xs font-medium">{formData.message.length}/1000</span>
                 </div>
               </div>
 
@@ -255,14 +255,14 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
 
               {/* Status Messages */}
               {submissionStatus === 'success' && (
-                <div className="flex items-center space-x-2 text-bright-yellow bg-bright-yellow/20 p-4 rounded-3xl border border-bright-yellow/30">
+                <div className="flex items-center space-x-2 text-charcoal bg-bright-yellow p-4 rounded-3xl border border-bright-yellow/30">
                   <CheckCircle className="w-5 h-5" />
                   <span className="font-medium">Thank you! Your suggestion has been submitted successfully. 🌟</span>
                 </div>
               )}
 
               {submissionStatus === 'blocked' && (
-                <div className="flex items-center space-x-2 text-hot-pink bg-hot-pink/20 p-4 rounded-3xl border border-hot-pink/30">
+                <div className="flex items-center space-x-2 text-white bg-deep-purple p-4 rounded-3xl border border-deep-purple/30">
                   <XCircle className="w-5 h-5" />
                   <div>
                     <p className="font-medium">Your message was blocked by our AI filter.</p>
@@ -275,7 +275,7 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
 
           {/* Recent Suggestions */}
           <div className="glass-pink rounded-3xl p-8 hover:glass-yellow transition-all duration-300">
-            <h3 className="text-2xl font-bold text-hot-pink mb-6 flex items-center">
+            <h3 className="text-2xl font-bold text-bright-yellow mb-6 flex items-center">
               <span className="text-2xl mr-3">💬</span>
               Recent Feedback
             </h3>
@@ -285,7 +285,7 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
                 <div key={suggestion.id} className="glass rounded-2xl p-4 hover:glass-yellow transition-all duration-300 hover:scale-105">
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center space-x-2">
-                      <span className="font-semibold text-hot-pink">{suggestion.name}</span>
+                      <span className="font-semibold text-bright-yellow">{suggestion.name}</span>
                       <span className={`px-2 py-1 rounded-full text-xs ${getCategoryColor(suggestion.category)}`}>
                         {suggestion.category}
                       </span>
@@ -298,7 +298,7 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
                   <div className="flex items-center justify-between">
                     <button
                       onClick={() => handleHelpful(suggestion.id)}
-                      className="flex items-center space-x-1 text-bright-yellow hover:text-hot-pink transition-colors hover:scale-105 duration-200"
+                      className="flex items-center space-x-1 text-bright-yellow hover:text-teal transition-colors hover:scale-105 duration-200"
                     >
                       <ThumbsUp className="w-4 h-4" />
                       <span className="text-sm">{suggestion.helpful} helpful</span>
@@ -313,9 +313,10 @@ const Suggestions: React.FC<SuggestionsProps> = ({ id }) => {
 
         {/* AI Filter Info */}
         <div className="mt-12 glass-pink rounded-3xl p-8 border border-soft-pink/30 hover:glass-yellow transition-all duration-300">
+        <div className="mt-12 glass-pink rounded-3xl p-8 border border-bright-yellow/30 hover:glass-yellow transition-all duration-300">
           <div className="flex items-center space-x-3 mb-4">
             <span className="text-2xl">🛡️</span>
-            <h4 className="text-lg font-semibold text-hot-pink">AI Content Filtering</h4>
+            <h4 className="text-lg font-semibold text-bright-yellow">AI Content Filtering</h4>
           </div>
           <p className="text-white mb-4">
             All suggestions go through our AI-powered content filter to ensure respectful and constructive feedback. 

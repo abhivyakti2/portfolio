@@ -127,9 +127,9 @@ const Timeline: React.FC<TimelineProps> = ({ id }) => {
         <div className="text-center mb-16">
           <div className="flower-divider mb-6"></div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 bounce-in">
-            My <span className="bg-gradient-to-r from-bright-yellow to-hot-pink bg-clip-text text-transparent">Journey 🌸</span>
+            My <span className="bg-gradient-to-r from-bright-yellow to-teal bg-clip-text text-transparent">Journey 🌸</span>
           </h2>
-          <p className="text-xl text-hot-pink max-w-2xl mx-auto font-medium">
+          <p className="text-xl text-bright-yellow max-w-2xl mx-auto font-medium">
             A timeline of my coding journey, projects, and professional milestones ✨
           </p>
           <div className="flower-divider mt-6"></div>
@@ -156,18 +156,19 @@ const Timeline: React.FC<TimelineProps> = ({ id }) => {
         {/* Timeline */}
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-1 bg-gradient-to-b from-bright-yellow via-hot-pink to-pastel-lavender rounded-full shadow-glow-pink"></div>
+          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-1 bg-gradient-to-b from-bright-yellow via-teal to-lavender rounded-full shadow-glow-yellow"></div>
 
           <div className="space-y-8">
             {filteredEvents.map((event, index) => (
               <div
                 key={event.id}
                 className={`relative flex flex-col md:flex-row items-start md:items-center ${
-                  index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                    : 'glass-pink text-bright-yellow hover:glass-yellow hover:text-charcoal hover:shadow-glow-yellow'
                 }`}
               >
                 {/* Timeline Node */}
                 <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-gradient-yellow-pink flex items-center justify-center text-white z-10 shadow-glow-yellow hover:scale-110 transition-transform duration-300">
+                <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-gradient-to-r from-bright-yellow to-teal flex items-center justify-center text-charcoal z-10 shadow-glow-yellow hover:scale-110 transition-transform duration-300">
                   {getEventIcon(event.type)}
                 </div>
 
@@ -180,9 +181,10 @@ const Timeline: React.FC<TimelineProps> = ({ id }) => {
                   <div className="glass-pink rounded-3xl p-6 hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt hover:shadow-float">
                     <div className="flex items-center space-x-2 mb-3">
                       <div className={`p-3 rounded-full bg-gradient-to-r ${getEventColor(event.type)} shadow-glow-soft`}>
+                      <div className={`p-3 rounded-full bg-gradient-to-r ${getEventColor(event.type)} shadow-glow-yellow`}>
                         {getEventIcon(event.type)}
                       </div>
-                      <span className="text-bright-yellow text-sm font-bold bg-bright-yellow/20 px-3 py-1 rounded-full">
+                      <span className="text-charcoal text-sm font-bold bg-bright-yellow px-3 py-1 rounded-full">
                         {new Date(event.date).toLocaleDateString('en-US', { 
                           year: 'numeric', 
                           month: 'long' 
@@ -190,14 +192,14 @@ const Timeline: React.FC<TimelineProps> = ({ id }) => {
                       </span>
                     </div>
                     
-                    <h3 className="text-xl font-bold text-hot-pink mb-2">{event.title}</h3>
+                    <h3 className="text-xl font-bold text-bright-yellow mb-2">{event.title}</h3>
                     <p className="text-white mb-4">{event.description}</p>
                     
                     {event.details && (
                       <ul className="space-y-1 mb-4">
                         {event.details.map((detail, detailIndex) => (
                           <li key={detailIndex} className="flex items-center space-x-2 text-white text-sm">
-                            <div className="w-2 h-2 bg-gradient-yellow-pink rounded-full shadow-glow-pink" />
+                            <div className="w-2 h-2 bg-gradient-to-r from-bright-yellow to-teal rounded-full shadow-glow-yellow" />
                             <span>{detail}</span>
                           </li>
                         ))}
@@ -207,7 +209,7 @@ const Timeline: React.FC<TimelineProps> = ({ id }) => {
                     {event.link && (
                       <a
                         href={event.link}
-                        className="inline-flex items-center space-x-1 text-hot-pink hover:text-bright-yellow transition-colors text-sm font-medium hover:scale-105 duration-200"
+                        className="inline-flex items-center space-x-1 text-bright-yellow hover:text-teal transition-colors text-sm font-medium hover:scale-105 duration-200"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -231,24 +233,24 @@ const Timeline: React.FC<TimelineProps> = ({ id }) => {
             <h3 className="text-2xl font-bold text-bright-yellow mb-2">
               {timelineEvents.filter(e => e.type === 'project').length}
             </h3>
-            <p className="text-hot-pink font-medium">Major Projects</p>
+            <p className="text-white font-medium">Major Projects</p>
           </div>
           <div className="glass-pink rounded-3xl p-6 text-center hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt">
             <div className="text-3xl mb-2">🏆</div>
             <h3 className="text-2xl font-bold text-bright-yellow mb-2">
               {timelineEvents.filter(e => e.type === 'achievement').length}
             </h3>
-            <p className="text-hot-pink font-medium">Achievements</p>
+            <p className="text-white font-medium">Achievements</p>
           </div>
           <div className="glass-pink rounded-3xl p-6 text-center hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt">
             <div className="text-3xl mb-2">⭐</div>
             <h3 className="text-2xl font-bold text-bright-yellow mb-2">3+</h3>
-            <p className="text-hot-pink font-medium">Years Experience</p>
+            <p className="text-white font-medium">Years Experience</p>
           </div>
           <div className="glass-pink rounded-3xl p-6 text-center hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt">
             <div className="text-3xl mb-2">💻</div>
             <h3 className="text-2xl font-bold text-bright-yellow mb-2">1000+</h3>
-            <p className="text-hot-pink font-medium">Code Contributions</p>
+            <p className="text-white font-medium">Code Contributions</p>
           </div>
         </div>
       </div>

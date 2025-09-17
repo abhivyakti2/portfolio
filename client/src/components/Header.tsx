@@ -29,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
             <div className="text-2xl">🌸</div>
-            <span className="text-hot-pink font-bold text-xl font-poppins">Alex's World</span>
+            <span className="text-bright-yellow font-bold text-xl font-poppins">Alex's World</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -41,7 +41,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => {
                 className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 ${
                   activeSection === id
                     ? 'text-white bg-gradient-yellow-pink shadow-glow-yellow'
-                    : 'text-hot-pink hover:text-white hover:bg-gradient-pink-lavender hover:shadow-glow-pink'
+                    : 'text-bright-yellow hover:text-white hover:bg-gradient-purple-teal hover:shadow-glow-purple'
                 }`}
               >
                 <Icon className="w-4 h-4" />
@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-hot-pink p-2 rounded-full hover:bg-soft-pink/20 transition-all duration-200"
+            className="md:hidden text-bright-yellow p-2 rounded-full hover:bg-lavender/20 transition-all duration-200"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -70,7 +70,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => {
                   className={`flex items-center space-x-3 px-4 py-3 rounded-full text-left transition-all duration-300 hover:scale-105 ${
                     activeSection === id
                       ? 'text-white bg-gradient-yellow-pink shadow-glow-yellow'
-                      : 'text-hot-pink hover:text-white hover:bg-gradient-pink-lavender'
+                      : 'text-bright-yellow hover:text-white hover:bg-gradient-purple-teal'
                   }`}
                 >
                   <Icon className="w-5 h-5" />

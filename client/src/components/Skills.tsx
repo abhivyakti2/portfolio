@@ -86,9 +86,9 @@ const Skills: React.FC<SkillsProps> = ({ id }) => {
         <div className="text-center mb-16">
           <div className="flower-divider mb-6"></div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 bounce-in">
-            Skills & <span className="bg-gradient-to-r from-bright-yellow to-hot-pink bg-clip-text text-transparent">Progress 📈</span>
+            Skills & <span className="bg-gradient-to-r from-bright-yellow to-teal bg-clip-text text-transparent">Progress 📈</span>
           </h2>
-          <p className="text-xl text-hot-pink max-w-2xl mx-auto font-medium">
+          <p className="text-xl text-bright-yellow max-w-2xl mx-auto font-medium">
             My technical expertise and continuous learning journey ✨
           </p>
           <div className="flower-divider mt-6"></div>
@@ -103,7 +103,7 @@ const Skills: React.FC<SkillsProps> = ({ id }) => {
               </div>
               <h3 className="text-2xl font-bold text-hot-pink mb-1">{stat.value}</h3>
               <p className="text-white text-sm mb-2 font-medium">{stat.label}</p>
-              <span className="text-bright-yellow text-xs font-semibold bg-bright-yellow/20 px-2 py-1 rounded-full">{stat.change}</span>
+              <span className="text-charcoal text-xs font-semibold bg-bright-yellow px-2 py-1 rounded-full">{stat.change}</span>
             </div>
           ))}
         </div>
@@ -111,7 +111,7 @@ const Skills: React.FC<SkillsProps> = ({ id }) => {
         {/* Skills Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div>
-            <h3 className="text-2xl font-bold text-hot-pink mb-8 flex items-center">
+            <h3 className="text-2xl font-bold text-bright-yellow mb-8 flex items-center">
               <span className="text-2xl mr-3">🛠️</span>
               Technical Skills
             </h3>
@@ -121,19 +121,19 @@ const Skills: React.FC<SkillsProps> = ({ id }) => {
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center space-x-3">
                       {getCategoryIcon(skill.category)}
-                      <h4 className="text-lg font-semibold text-hot-pink">{skill.name}</h4>
-                      <span className="px-3 py-1 bg-gradient-yellow-pink text-white text-xs rounded-full font-medium">
+                      <h4 className="text-lg font-semibold text-bright-yellow">{skill.name}</h4>
+                      <span className="px-3 py-1 bg-charcoal text-bright-yellow text-xs rounded-full font-medium border border-bright-yellow/30">
                         {skill.category}
                       </span>
                     </div>
                     <div className="text-right">
                       <span className="text-bright-yellow font-bold text-lg">{skill.level}%</span>
-                      <p className="text-hot-pink text-xs font-medium">{skill.projects} projects</p>
+                      <p className="text-white text-xs font-medium">{skill.projects} projects</p>
                     </div>
                   </div>
-                  <div className="w-full bg-gray-700 rounded-full h-3">
+                  <div className="w-full bg-charcoal rounded-full h-3">
                     <div
-                      className={`h-3 rounded-full bg-gradient-yellow-pink transition-all duration-1000 ease-out shadow-glow-yellow`}
+                      className={`h-3 rounded-full bg-gradient-to-r from-bright-yellow to-teal transition-all duration-1000 ease-out shadow-glow-yellow`}
                       style={{ width: `${skill.level}%` }}
                     />
                   </div>
@@ -143,7 +143,7 @@ const Skills: React.FC<SkillsProps> = ({ id }) => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold text-hot-pink mb-8 flex items-center">
+            <h3 className="text-2xl font-bold text-bright-yellow mb-8 flex items-center">
               <span className="text-2xl mr-3">🏆</span>
               Recent Achievements
             </h3>
@@ -155,9 +155,9 @@ const Skills: React.FC<SkillsProps> = ({ id }) => {
                       <achievement.icon className="w-6 h-6" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-lg font-semibold text-hot-pink mb-1">{achievement.title}</h4>
+                      <h4 className="text-lg font-semibold text-bright-yellow mb-1">{achievement.title}</h4>
                       <p className="text-white mb-2">{achievement.description}</p>
-                      <span className="text-bright-yellow text-sm font-semibold bg-bright-yellow/20 px-2 py-1 rounded-full">{achievement.date}</span>
+                      <span className="text-charcoal text-sm font-semibold bg-bright-yellow px-2 py-1 rounded-full">{achievement.date}</span>
                     </div>
                   </div>
                 </div>
@@ -165,7 +165,7 @@ const Skills: React.FC<SkillsProps> = ({ id }) => {
 
               {/* Learning Timeline */}
               <div className="glass-pink rounded-3xl p-6 hover:glass-yellow transition-all duration-300">
-                <h4 className="text-lg font-semibold text-hot-pink mb-4 flex items-center">
+                <h4 className="text-lg font-semibold text-bright-yellow mb-4 flex items-center">
                   <span className="text-xl mr-2">📚</span>
                   Learning Milestones
                 </h4>
@@ -177,9 +177,9 @@ const Skills: React.FC<SkillsProps> = ({ id }) => {
                     { year: '2021', milestone: 'Started Programming Journey 🚀' },
                   ].map((item, index) => (
                     <div key={index} className="flex items-center space-x-4">
-                      <div className="w-3 h-3 bg-gradient-yellow-pink rounded-full shadow-glow-pink" />
+                      <div className="w-3 h-3 bg-gradient-to-r from-bright-yellow to-teal rounded-full shadow-glow-yellow" />
                       <div className="flex-1">
-                        <span className="text-bright-yellow font-bold text-sm bg-bright-yellow/20 px-2 py-1 rounded-full">{item.year}</span>
+                        <span className="text-charcoal font-bold text-sm bg-bright-yellow px-2 py-1 rounded-full">{item.year}</span>
                         <p className="text-white text-sm mt-1">{item.milestone}</p>
                       </div>
                     </div>
@@ -193,16 +193,16 @@ const Skills: React.FC<SkillsProps> = ({ id }) => {
         {/* Skill Categories */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { name: 'Frontend', count: 12, emoji: '🎨', color: 'from-bright-yellow to-hot-pink' },
-            { name: 'Backend', count: 8, emoji: '⚙️', color: 'from-hot-pink to-pastel-lavender' },
-            { name: 'Database', count: 6, emoji: '🗄️', color: 'from-pastel-lavender to-bright-yellow' },
-            { name: 'DevOps', count: 4, emoji: '🚀', color: 'from-bright-yellow to-soft-pink' },
+            { name: 'Frontend', count: 12, emoji: '🎨', color: 'from-bright-yellow to-teal' },
+            { name: 'Backend', count: 8, emoji: '⚙️', color: 'from-teal to-lavender' },
+            { name: 'Database', count: 6, emoji: '🗄️', color: 'from-lavender to-bright-yellow' },
+            { name: 'DevOps', count: 4, emoji: '🚀', color: 'from-bright-yellow to-mint-green' },
           ].map((category, index) => (
             <div key={index} className="glass-pink rounded-3xl p-6 text-center hover:glass-yellow transition-all duration-300 hover:scale-105 hover-tilt hover:shadow-float">
-              <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${category.color} flex items-center justify-center shadow-glow-soft`}>
+              <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${category.color} flex items-center justify-center shadow-glow-yellow`}>
                 <span className="text-2xl">{category.emoji}</span>
               </div>
-              <h4 className="text-lg font-semibold text-hot-pink mb-1">{category.name}</h4>
+              <h4 className="text-lg font-semibold text-bright-yellow mb-1">{category.name}</h4>
               <p className="text-white text-sm font-medium">{category.count} technologies</p>
             </div>
           ))}

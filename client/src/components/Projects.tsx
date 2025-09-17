@@ -95,9 +95,9 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
         <div className="text-center mb-16">
           <div className="flower-divider mb-6"></div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 bounce-in">
-            Featured <span className="bg-gradient-to-r from-bright-yellow to-hot-pink bg-clip-text text-transparent">Projects 🌟</span>
+            Featured <span className="bg-gradient-to-r from-bright-yellow to-teal bg-clip-text text-transparent">Projects 🌟</span>
           </h2>
-          <p className="text-xl text-hot-pink max-w-2xl mx-auto font-medium">
+          <p className="text-xl text-bright-yellow max-w-2xl mx-auto font-medium">
             Explore my latest work and see the technologies I'm passionate about ✨
           </p>
           <div className="flower-divider mt-6"></div>
@@ -130,13 +130,13 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
                 {project.techStack.slice(0, 3).map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-3 py-1 bg-gradient-yellow-pink text-white text-xs rounded-full font-medium"
+                    className="px-3 py-1 bg-charcoal text-bright-yellow text-xs rounded-full font-medium border border-bright-yellow/30"
                   >
                     {tech}
                   </span>
                 ))}
                 {project.techStack.length > 3 && (
-                  <span className="px-3 py-1 bg-gradient-pink-lavender text-white text-xs rounded-full font-medium">
+                  <span className="px-3 py-1 bg-deep-purple text-bright-yellow text-xs rounded-full font-medium">
                     +{project.techStack.length - 3} more
                   </span>
                 )}
@@ -156,14 +156,14 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
                   <a
                     href={project.githubUrl}
                     onClick={(e) => e.stopPropagation()}
-                    className="text-hot-pink hover:text-bright-yellow transition-colors hover:scale-110 duration-200"
+                    className="text-bright-yellow hover:text-teal transition-colors hover:scale-110 duration-200"
                   >
                     <Github className="w-4 h-4" />
                   </a>
                   <a
                     href={project.liveUrl}
                     onClick={(e) => e.stopPropagation()}
-                    className="text-hot-pink hover:text-bright-yellow transition-colors hover:scale-110 duration-200"
+                    className="text-bright-yellow hover:text-teal transition-colors hover:scale-110 duration-200"
                   >
                     <ExternalLink className="w-4 h-4" />
                   </a>
