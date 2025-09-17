@@ -24,7 +24,6 @@ export default {
         'light-grey': '#F3F4F6',
       },
       backgroundImage: {
-        'gradient-hero': 'linear-gradient(135deg, #2E1A47 0%, #FF5D8F 50%, #FF6B35 100%)',
         'gradient-yellow-pink': 'linear-gradient(45deg, #FFE066, #FF5D8F)',
         'gradient-purple-teal': 'linear-gradient(45deg, #FF5D8F, #FF6B35)',
         'gradient-pink-lavender': 'linear-gradient(45deg, #FF5D8F, #FFE066)',
